@@ -1,0 +1,53 @@
+<nodeDefs>
+  <nodeDef id="CONTROLLER" nls="ACN">
+    <sts>
+      <st id="GV0" editor="ACN_RUNSTATE" />
+      <st id="GV1" editor="ACN_OPMODE" /> 
+      <st id="GV2" editor="ACN_FREEZE" /> 
+      <st id="GV3" editor="ACN_SENSOR" /> 
+      <st id="GV4" editor="ACN_SENSOR" /> 
+      <st id="GV5" editor="ACN_SENSOR" /> 
+      <st id="CLITEMP" editor="ATC_TEMP" /> 
+      <st id="GV9" editor="ATC_TEMP" />
+    </sts>
+    <cmds>
+      <sends />
+      <accepts>
+        <cmd id="QUERY" />
+      </accepts>
+    </cmds>
+  </nodeDef>
+  <nodeDef id="EQUIPMENT" nls="AEQ">
+    <sts>
+      <st id="ST" editor="AEQ_ST" />
+    </sts>
+    <cmds>
+      <sends />
+      <accepts>
+        <cmd id="DON" />
+        <cmd id="DOF" />
+        <cmd id="QUERY" />
+      </accepts>
+    </cmds>
+  </nodeDef>
+  <nodeDef id="TEMP_CONTROL" nls="ATC">
+    <sts>
+      <st id="ST" editor="ATC_ST" />
+      <st id="CLIMD" editor="ATC_MODE" />
+      <st id="CLISPH" editor="ATC_TEMP" />
+      <st id="CLITEMP" editor="ATC_TEMP" />    
+    </sts>
+    <cmds>
+      <sends />
+      <accepts>
+        <cmd id="SET_MODE">
+          <p id="" editor="ATC_MODE" init="CLIMD" />
+        </cmd>
+        <cmd id="SET_TEMP">
+          <p id="" editor="ATC_TEMP" init="CLISPH" />
+        </cmd>
+        <cmd id="QUERY" />
+      </accepts>
+    </cmds>
+  </nodeDef>
+</nodeDefs>

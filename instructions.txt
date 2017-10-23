@@ -1,0 +1,20 @@
+To install this Node Server in your ISY, perform the following:
+1. Ensure that the correct settings for the Node Server are in the config.yaml file. See https://github.com/Goose66/autelis-polyglot/blob/pentair/README.md for details.
+2. Download the Node Server's profile using the "Download profile" button above.
+3. Note the Node Server number and copy the "Base URL" string specified above.
+4. Add Node Server in the ISY Admin Console:
+   * In the top menu bar, select "Node Servers"->"Configure" and then the correct Noder Server number.
+   * Under "Node Server Configuration", enter the following:
+      * Profile Name: "Pool Controller" or whatever name you choose
+      * User ID: user ID configured for Polyglot server installation (not the user profile on the server under which Polyglot runs)
+      * Password: password configured for Polyglot server installation (not the user profile on the server under which Polyglot runs)
+      * Base URL: paste the "Base URL" string copied in step 3 above
+      * Host Name: the IP address of your Polyglot server 
+      * SSL: Leave unchecked
+      * Port: port configured for Polyglot server installation (default 8080)
+      * Leave Timeout and ISY User fields with defaults
+   * Click the "Upload Profile" button at the bottom and upload the Node Server's profile (*.zip) downloaded in step 2 above.
+   * Click OK to save the configuration.
+5. Restart the ISY (select "Configuration" tab and click "Reboot" button)
+6. Once the ISY has restarted, return the "Node Server Configuration" for the Node Server, upload the Node Server's profile again, and restart the ISY once more (bug in firmware 5.0.10).
+7. Once the ISY has restarted, select "Node Servers"->"Pool Controller" in the top menu bar, and then select "Add All Nodes". All circuits and features configured in your controller should be added to the node list on the ISY, along with "controller", "poolht", and "spaht" nodes.

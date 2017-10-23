@@ -1,0 +1,10 @@
+{
+    "name": "Autelis Pool Control",
+    "docs": "",
+    "type": "python",
+    "executable": "autelis.py",
+    "configfile": "config.yaml",
+    "description": "Accesses the Austelis Pool Control module for Pentair Intellitouch/EasyTouch/SunTouch to allow ISY 994i to control pool functions.",
+    "notice": "Intellitouch®, EasyTouch®, and SunTouch® are registered trademarks of Pentair, Ltd.",
+    "credits": []
+}

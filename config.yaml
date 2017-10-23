@@ -1,0 +1,7 @@
+controller:
+    ipaddress: 192.168.1.249
+    password: admin
+    username: admin
+configuration:
+    pollinginterval: 60
+    ignoresolar: True
